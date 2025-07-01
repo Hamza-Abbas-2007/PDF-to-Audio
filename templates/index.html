@@ -1,0 +1,18 @@
+{%extends 'base.html'%}
+
+{%block head%}
+<title>PDF to AUDIO</title>
+{%endblock%}
+
+{%block body%}
+<h1>PDF TO AUDIO</h1>
+
+<form action = "/" method = "post" enctype="multipart/form-data">  
+        <input type="file" name="file" />  
+        <input type = "submit" value="Upload">  
+    </form>
+
+<a href="{{ url_for('download_file', filename='output.mp3') }}">
+    <button>Download Audio</button>
+</a>
+{%endblock%}
